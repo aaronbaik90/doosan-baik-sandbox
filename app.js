@@ -24,7 +24,7 @@ app.get('/webhook', function (req, res) {
   } 
 });
 
-app.post('/leadtest', function (req, res) {
+app.post('/webhook', function (req, res) {
     console.log(req);
     res.sendStatus(200);
 });
