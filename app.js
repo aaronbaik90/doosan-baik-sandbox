@@ -28,3 +28,9 @@ app.post('/leadtest', function (req, res) {
     console.log(req);
     res.sendStatus(200);
 });
+
+app.listen(app.get('port'), function() {
+  console.log('listening at ', app.get('port'));
+});
+
+module.exports = app;
