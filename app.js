@@ -30,7 +30,7 @@ app.post('/webhook', function (req, res) {
 });
 
 app.get('/pixel', function (req, res) {
-  res.sendFile(path.join(__dirname + '/pixel.html'));
+  res.render('/pixel.html');
 });
 
 app.listen(app.get('port'), function() {
