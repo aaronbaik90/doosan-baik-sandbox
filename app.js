@@ -29,6 +29,10 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
 });
 
+app.get('/pixel', function (req, res) {
+  res.sendFile(path.join(__dirname + '/pixel.html'));
+});
+
 app.listen(app.get('port'), function() {
   console.log('listening at ', app.get('port'));
 });
