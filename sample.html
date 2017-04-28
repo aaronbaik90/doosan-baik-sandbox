@@ -19,7 +19,9 @@
 
    function myFacebookLogin() {
      FB.login(function (response) {
+       // response contains user access token with the scope below.
        console.log(response);
+       window.location.replace('/access_token_demo.php?user_token=' + response.authResponse.accessToken);
      }, {scope: 'ads_management'});
    }
 </script>
