@@ -33,6 +33,10 @@ app.get('/pixel', function (req, res) {
   res.render('/pixel.html');
 });
 
+app.get('/sample', function (req, res) {
+  res.render('/sample.html');
+});
+
 app.listen(app.get('port'), function() {
   console.log('listening at ', app.get('port'));
 });
