@@ -30,6 +30,10 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
 });
 
+app.get('/referral', function (req, res) {
+  let code = req.param('code');
+  res.send(code);
+});
 
 app.get('/sample', function (req, res) {
   fs.readFile(__dirname + '/sample.html', 'utf8', function(err, text) {
