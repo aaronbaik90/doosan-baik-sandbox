@@ -32,7 +32,10 @@ app.post('/webhook', function (req, res) {
 
 app.get('/referral', function (req, res) {
   let code = req.param('code');
-  res.sendFile('referral.html');
+  console.log(code);
+  fs.readFile(__dirname + '/referral.html', 'utf8', function(err, text) {
+    res.send(text);
+  });
 });
 
 app.get('/sample', function (req, res) {
