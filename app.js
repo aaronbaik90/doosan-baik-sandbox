@@ -32,6 +32,7 @@ app.post('/webhook', function (req, res) {
 
 app.get('/referral', function (req, res) {
   let code = req.param('code');
+  console.log(req.header('Referer'));
   console.log(code);
   fs.readFile(__dirname + '/referral.html', 'utf8', function(err, text) {
     res.send(text);
@@ -39,7 +40,6 @@ app.get('/referral', function (req, res) {
 });
 
 app.get('/sample', function (req, res) {
-  console.log(req.header('Referer'));
   fs.readFile(__dirname + '/sample.html', 'utf8', function(err, text) {
     res.send(text);
   });
